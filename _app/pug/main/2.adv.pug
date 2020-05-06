@@ -1,0 +1,19 @@
+mixin adv(cl,h4,p)
+	.adv(class=cl)
+		h4.adv-title=h4
+		p.adv-text=p
+
+section#advantages
+	.container
+		.row
+			.col-md-3.col-sm-3
+				.adv.adv-1
+					+adv('adv-1','','')
+					+adv('adv-2','','')
+					+adv('adv-3','','')
+			.col-md-3.col-sm-3
+					+adv('adv-4','','')
+					+adv('adv-5','','')
+					+adv('adv-6','','')
+			.col-md-6.col-sm-6
+				img.advantage-img(src="img/images/adv.png", alt="Картинка блока")

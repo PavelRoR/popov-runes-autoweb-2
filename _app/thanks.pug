@@ -1,0 +1,27 @@
+-var head_title = 'Вы зарегистрированы на мастер-класс «Секреты рун»';
+-var styles = '../css/promo.min.css';
+-var fav_ico = '../favicon.ico'
+-var fav_png = '../favicon.png'
+
+	
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		include pug/head
+		include pug/scripts/head_scripts
+	body
+		include pug/scripts/body_top_scripts
+		section#main
+			include pug/0.header.pug
+			.container
+				h1.main-title Вы зарегистрированы на мастер-класс 
+					span «Секреты рун»
+				.button-wrapper
+					a.button.button-1.button-thanks(href='https://drive.google.com/drive/folders/1adDZP22vl49gih56_Q-T0WeeZRRwt2ap?usp=sharing' target="_blank") Забрать доп.материалы
+				h2.main-subtitle Выбирайте Ваш любимый мессенджер, жмите на кнопку и забирайте бонус
+					span +
+					span Бонус: «Как стать энергичным и бодрым за 5 минут в день»
+				include pug/bots/bots.pug
+		include pug/0.footer.pug
+		script(src="../js/thanks.min.js")
+		include pug/scripts/body_bottom_scripts
