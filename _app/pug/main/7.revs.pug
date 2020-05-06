@@ -1,0 +1,11 @@
+section#revs
+	.container
+		+gt('','Отзывы')
+		.revs.revs-text.center
+			each n in [1,2,3,4,5,6,7,8,9,10,11,12,13,14]
+				a.revs-text-link(href="img/revs/text-"+n + ".jpg" data-fancybox="text-revs")
+					img.revs-text-img(src="img/revs/text-"+n+".min.jpg", alt="Отзыв "+ n)
+		.revs.revs-video.center
+			each n in [1,2,3,4,5,6,7,8,9,10,11,12,13,14]
+				.video-wrapper.video-wrapper-revs(data-youы)
+					img.video-wrapper-revs-img(src="img/revs/text-"+n+".min.jpg", alt="Отзыв "+ n)

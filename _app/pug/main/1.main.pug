@@ -7,17 +7,16 @@ section#main
 				h2.main-subtitle Получите опыт работы с инструментами далёкого прошлого для трансформации Своего настоящего и будущего
 				form(action=action+group method="post" enctype="application/x-www-form-urlencoded" accept-charset="UTF-8" ).form.form-main
 					h3.form-title РЕГИСТРИРУЙТЕСЬ НА ОНЛАЙН-МАСТЕР-КЛАСС “СЕКРЕТЫ РУН”
-					p.switch-text.hide
 					.email-block.email-block-form
 						input( type="hidden" value="1" name="required_fields[email]")
 						input(class="input input-mail input-mail-main" name="Contact[email]" type="text" placeholder="Ваш email")
-					button(type="submit").button.button-2.button-form.button-form-main Записаться
+					button(type="submit").button.button-form.button-form-main Записаться
 					.clearfix
 					p.alert-message
 					.checking
 						input(type="checkbox" id="check-1" checked).check
 						label(for="check-1").check-label Я согласен с 
-							a(href="https://mastervision.su/politics/" target="_blank") условиями обработки
+							a(href="#Politics").link-up условиями обработки
 							|  персональных данных по 152 - Ф3
 					div(style="display: none;")
 						#formTypeSpecificVars-1(style="display: none;")
