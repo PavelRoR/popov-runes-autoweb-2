@@ -1,4 +1,4 @@
--var head_title = 'Выбирайте Ваш любимый мессенджер, жмите на кнопку и забирайте бонус';
+-var head_title = 'Вы зарегистрированы на мастер-класс «Секреты рун»';
 -var styles = '../css/promo.min.css';
 -var fav_ico = '../favicon.ico'
 -var fav_png = '../favicon.png'
@@ -8,16 +8,16 @@
 html(lang="ru")
 	head
 		include pug/head
-		include pug/scripts/head_fb_scripts
+		include pug/scripts/head_scripts
 	body
-		include pug/scripts/body_top_fb_scripts
+		include pug/scripts/body_top_scripts
 		section#main
 			include pug/0.header.pug
 			.container
-				h2.main-subtitle.main-subtitle-bots Выбирайте Ваш любимый мессенджер, жмите на кнопку и забирайте бонус
-					span +
-					span Бонус: «Как стать энергичным и бодрым за 5 минут в день»
-				include pug/bots/bots.pug
+				.main-container
+					h3.main-subtitle Выбирайте Ваш любимый мессенджер, жмите на кнопку и забирайте бонус
+						span БОНУС: «КАК СТАТЬ ЭНЕРГИЧНЫМ И БОДРЫМ ЗА 5 МИНУТ В ДЕНЬ»
+					h3.main-subtitle P.S., перейдя в мессенджер в самом низу экрана, нажмите "Начать”
+					include pug/bots/bots.pug
 		include pug/0.footer.pug
-		script(src="../js/thanks.min.js")
 		include pug/scripts/body_bottom_scripts

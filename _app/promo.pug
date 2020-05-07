@@ -1,4 +1,4 @@
--var head_title = 'Оставьте свои данные, чтоб скачать дополнительные материалы по отношениям и целям';
+-var head_title = 'Оставьте свои данные, чтобы скачать рабочие тетради. Они помогут вам максимально эффективно работать на уроках';
 -var styles = '../css/promo.min.css';
 -var fav_ico = '../favicon.ico'
 -var fav_png = '../favicon.png'
@@ -13,34 +13,30 @@ html(lang="ru")
 		section#main
 			include pug/0.header.pug
 			.container
-				h1.main-title Оставьте свои данные, чтобы скачать рабочие тетради. Они помогут вам максимально эффективно работать на уроках
-				.mail-section.mail-section-main
-					.mail-section-container
-						form(action="https://shop.mastervision.su/?r=personal/newsletter/data/add&id=3568&lg=ru" method="post" enctype="application/x-www-form-urlencoded" accept-charset="UTF-8" ).form.form-promo
-							.inputrow
-								.inputblock
-									input(type="hidden" value="1" name="required_fields[phone_number]")
-									input(class="input input-mail" name="Contact[phone_number]" type="text" placeholder="Ваш телефон")
-							button(type="submit").button.button-1 Забрать рабочие тетради 
-								br
-								| и завершить регистрацию
-							.clearfix
-							p.alert-message
-							.checking
-								input(type="checkbox" id="check" checked).check
-								label(for="check").check-label Я согласен с 
-									a(href="javascript:void(0);")(data-toggle="modal" data-target="#myPolitics")  условиями обработки персональных данных
-									|  по 152 - Ф3
-							div(style="display: none;")
-								div#formTypeSpecificVars(style="display: none;")
-								<!-- API код канала рекламы --> 
-								input(type="hidden" value="0" name="Contact[id_advertising_channel_page]")#form_newsletter_id_advertising_channel_page
-								input(type="hidden" name="formId" value="281")
-								input(type="hidden" name="formVc" value="1302808444")
-				.button-wrapper
-					a.button.button-1.button-bots(href="../bots/") Не нужны тетради, 
-						br
-						| завершить регистрацию
+				.main-container
+					h1.main-title Оставьте свои данные, чтобы скачать рабочие тетради. Они помогут вам максимально эффективно работать на уроках
+					form(action="https://shop.mastervision.su/?r=personal/newsletter/data/add&id=3568&lg=ru" method="post" enctype="application/x-www-form-urlencoded" accept-charset="UTF-8" ).form.form-promo
+						.inputrow
+							.inputblock
+								input(type="hidden" value="1" name="required_fields[phone_number]")
+								input(class="input input-mail" name="Contact[phone_number]" type="text" placeholder="Ваш телефон")
+						button(type="submit").button.button-1 Забрать рабочие тетради 
+							br
+							| и завершить регистрацию
+						.clearfix
+						p.alert-message
+						.checking
+							input(type="checkbox" id="check" checked).check
+							label(for="check").check-label Я согласен с 
+								a(href="#Politics").link-up условиями обработки 
+								|  персональных данных по 152 - Ф3
+						div(style="display: none;")
+							div#formTypeSpecificVars(style="display: none;")
+							<!-- API код канала рекламы --> 
+							input(type="hidden" value="0" name="Contact[id_advertising_channel_page]")#form_newsletter_id_advertising_channel_page
+							input(type="hidden" name="formId" value="281")
+							input(type="hidden" name="formVc" value="1302808444")
+				a.button.button-bots(href="../bots/") Завершить регистрацию
 		include pug/0.footer.pug
 		include pug/main/10.politics.pug
 		script(src="../js/promo.min.js")
