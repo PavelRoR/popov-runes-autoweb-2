@@ -1,3 +1,4 @@
+-var path = '';
 -var head_url = 'https://popov.mymv.ru/runes-secrets-webinar-2/';
 -var head_title = '«Секрет рун»';
 -var head_description = 'Онлайн-мастер-класс Василия Попова';
@@ -6,6 +7,11 @@
 -var fav_ico = 'favicon.ico';
 -var fav_png = 'favicon.png';
 -var scripts ='js/scripts.min.js'
+-var action = ''
+-var group = ''
+-var formId = ''
+-var formVc = ''
+
 
 mixin gt(cl,h3)
 	h3.general-title(class=cl)=h3
@@ -31,5 +37,5 @@ html(lang="ru")
 		include pug/main/9.modal.pug
 		include pug/main/10.politics.pug
 		include pug/0.scripts.pug
-		//- include pug/scripts/chat
+		include pug/scripts/chat
 		include pug/scripts/body_bottom_scripts
