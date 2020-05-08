@@ -17,25 +17,7 @@ $(document).ready(function () {
     });
     /*Модалки*/
     $('.more-button').fancybox();
-    /*Карусели*/
-    $('.for-items').slick({
-        autoplay: true,
-        autoplaySpeed: 2000,
-        pauseOnHover: true,
-        infinite: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        dots: false,
-        speed: 300,
-        arrows: true,
-        adaptiveHeight: true,
-        responsive: [{
-            breakpoint: 1025,
-            settings: {
-                autoplay: false
-            }
-        }]
-    });
+
     $('.revs').slick({
         autoplay: true,
         autoplaySpeed: 3000,
@@ -56,7 +38,7 @@ $(document).ready(function () {
             }
         },
         {
-            breakpoint: 768,
+            breakpoint: 385,
             settings: {
                 slidesToShow: 1
             }
