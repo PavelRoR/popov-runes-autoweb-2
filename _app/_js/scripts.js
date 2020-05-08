@@ -64,11 +64,17 @@ $(document).ready(function () {
         slidesToScroll: 1,
         dots: false,
         speed: 300,
-        arrows: true
-        // adaptiveHeight: true
+        arrows: true,
+        adaptiveHeight: true,
+        responsive: [{
+            breakpoint: 1025,
+            settings: {
+                autoplay: false
+            }
+        }]
     });
     $('.revs').slick({
-        autoplay: true,
+        // autoplay: true,
         autoplaySpeed: 2000,
         pauseOnHover: true,
         slidesToShow: 3,
@@ -80,23 +86,17 @@ $(document).ready(function () {
         adaptiveHeight: true,
         centerMode: true,
         responsive: [{
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 3,
-                }
-            },
-            {
-                breakpoint: 767,
-                settings: {
-                    slidesToShow: 2
-                }
-            },
-            {
-                breakpoint: 485,
-                settings: {
-                    slidesToShow: 1
-                }
+            breakpoint: 1024,
+            settings: {
+                slidesToShow: 3,
             }
+        },
+        {
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 1
+            }
+        }
         ]
     });
 
