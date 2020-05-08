@@ -1,0 +1,25 @@
+#features
+	padding 0 0 100px
+.features-img
+	width 100%
+	max-width 560px
+	display block
+	margin 0 auto
+.features-text
+	margin-bottom: 20px
+	&:first-child
+		position relative
+		&:before
+			content ''
+			display block
+			position absolute
+			background-image url(../img/icons/rune-1.png)
+			background-repeat no-repeat
+			background-position: center
+			background-size contain
+			left 0
+			top -30px
+			width 80px
+			height 120px
+	&:last-child
+		margin-bottom: 70px

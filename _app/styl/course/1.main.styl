@@ -1,0 +1,65 @@
+#main
+	padding 0 0 100px
+	background-image url(../img/backs/main.png)
+	background-repeat no-repeat
+	background-position: bottom 30px right -20%
+	background-size: 700px auto
+	text-align center
+	.container.main-container
+		position relative
+		&:before
+			content: ''
+			display block
+			position absolute
+			width 80px
+			height 120px
+			background-image url(../img/icons/rune-2.png)
+			background-repeat no-repeat
+			background-position: center
+			background-size contain
+			top 90px
+			left 0
+		&:after
+			content: ''
+			display block
+			position absolute
+			width 100px
+			height 150px
+			background-image url(../img/icons/rune-3.png)
+			background-repeat no-repeat
+			background-position: center
+			background-size contain
+			bottom -100px
+			right 0
+.main-title
+	font-family: RS
+	margin 60px 0 10px
+	text-transform: uppercase
+	font-size: 50px
+	line-height: 1
+	display inline-block
+	position relative
+	&:before
+		content ''
+		display block
+		position absolute
+		width 80px
+		height 120px
+		background-image url(../img/icons/rune-1.png)
+		background-repeat no-repeat
+		background-position: center
+		background-size contain
+		top -10px
+		left 47px
+	small
+		display block
+		text-transform none
+		font-size: 18px
+.main-info
+	font-size: 20px
+	font-family: OS
+	margin-bottom: 40px
+	span
+		display inline-block
+		text-transform uppercase
+		font-family: RS

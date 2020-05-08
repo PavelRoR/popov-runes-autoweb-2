@@ -1,0 +1,75 @@
+#prices
+	padding 0 0 100px
+.packet
+	width 100%
+	max-width 380px
+	margin 0 auto
+	border: 3px solid #5C145D;
+	border-radius: 15px;
+	text-align center
+	&-2
+		margin-top: -15px
+	&-head
+		padding 20px
+		&-title
+			font-size: 22px
+			font-family: RS
+			text-transform uppercase
+			line-height: 1.2
+			small
+				text-transform none
+				display block
+				font-family: OS
+				font-size: 16px
+	&-body
+		padding 20px
+		border-top: 3px solid #5C145D;
+		border-bottom:  3px solid #5C145D;
+		&-text
+			font-family: RS
+	&-footer
+		padding 20px
+.more-button
+	color rgba(0, 0, 0, 0.5);
+	display inline-block
+	margin-top: 10px
+	border-bottom: 1px solid
+	transition: all .3s ease
+	&:focus
+		text-decoration none 
+		color rgba(0, 0, 0, 0.5);
+	&:hover
+		text-decoration none
+		color rgba(0, 0, 0, 0.9);
+.cost-full
+	font-size: 24px
+	font-family: RS
+	margin-bottom: 15px
+	line-height: 1.2
+	span
+		font-family: OS
+		text-decoration line-through
+		display block
+.cost-sale
+	color #5C145D;
+	font-size: 20px
+	font-family: OS
+	span
+		display inline-block
+.cost-today
+	@extend .cost-full
+	span
+		font-weight: 900
+		text-decoration none
+.prepayment
+	text-align center
+	margin-top: 30px
+	&-title
+		font-size: 26px
+		font-family: RS
+		color red
+		text-transform uppercase
+	&-text
+		font-size: 20px
+		font-family: OS
+		margin 15px 0 25px
