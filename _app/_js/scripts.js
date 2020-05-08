@@ -1,6 +1,7 @@
 //@prepros-prepend jquery-2.1.1.min.js
-//@prepros-prepend slick.min.js
 //@prepros-prepend jquery.fancybox.min.js
+//@prepros-prepend jquery.magnific-popup.min.js
+//@prepros-prepend slick.min.js
 
 $(document).ready(function () {
     $(function () {
@@ -55,6 +56,9 @@ $(document).ready(function () {
             message.slideUp(500);
         });
     });
+    /*Модалки*/
+    $('.button-up, .link-up').fancybox();
+    /*Карусели*/
     $('.for-items').slick({
         autoplay: true,
         autoplaySpeed: 2000,
@@ -74,8 +78,8 @@ $(document).ready(function () {
         }]
     });
     $('.revs').slick({
-        // autoplay: true,
-        autoplaySpeed: 2000,
+        autoplay: true,
+        autoplaySpeed: 3000,
         pauseOnHover: true,
         slidesToShow: 3,
         slidesToScroll: 1,
@@ -83,7 +87,8 @@ $(document).ready(function () {
         dots: false,
         speed: 300,
         arrows: true,
-        adaptiveHeight: true,
+        centerPadding: '15px',
+        // adaptiveHeight: true,
         centerMode: true,
         responsive: [{
             breakpoint: 1024,
@@ -99,9 +104,39 @@ $(document).ready(function () {
         }
         ]
     });
+    $(function () {
+        $("[data-fancybox]").fancybox({
+            buttons: [
+                'slideShow',
+                'share',
+                'zoom',
+                'fullScreen',
+                // 'download',
+                'close'
+            ],
+            speed: 330,
+            loop: true,
+            opacity: "auto",
+            autoScale: true,
+            mouseWheel: true,
+            transitionEffect: 'slide'
+        });
+    });
+    $('.revs-text-link').magnificPopup({
+        type: 'image',
+        gallery: {
+            enabled: true,
+            preload: [0, 2], // read about this option in next Lazy-loading section
 
-    /*Модалки*/
-    $('.button-up, .link-up').fancybox();
+            navigateByImgClick: true,
+
+            arrowMarkup: '<button title="%title%" type="button" class="mfp-arrow mfp-arrow-%dir%"></button>', // markup of an arrow button
+
+            tPrev: 'Previous (Left arrow key)', // title for left button
+            tNext: 'Next (Right arrow key)', // title for right button
+            tCounter: '<span class="mfp-counter">%curr% of %total%</span>' // markup of counter
+        }
+    });
     /*Видео-отзывы*/
     $(".video-wrapper-rev img").click(function () {
         var a = $(this).parent().attr("data-youtube");
@@ -120,7 +155,7 @@ $(document).ready(function () {
             console.log(a);
         });
     });
-    $('.slick-arrow').on('click', function () {
+    $('.revs-video .slick-arrow').on('click', function () {
         $('.video-wrapper-rev iframe').each(function () {
             // var v =$('.video_rev_img');
             var l = $(this).parent().attr('data-img');
